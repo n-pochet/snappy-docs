@@ -384,7 +384,8 @@ The socket abstract name or socket path. Valid formats are: `<port>`, `[::]:<por
           plugs: [home, network-bind]
           daemon: simple
           sockets:
-            listen-stream: 8080
+            my-socket-name:
+              listen-stream: 8080
 
 ### socket-mode
 
@@ -399,8 +400,9 @@ For Unix sockets, the file permission (e.g. `0644`).
           plugs: [home, network-bind]
           daemon: simple
           sockets:
-            listen-stream: $SNAP_DATA/foo_data
-            socket-mode: 0644
+            my-socket-name:
+              listen-stream: $SNAP_DATA/foo_data
+              socket-mode: 0644
 
 ### parts
 
